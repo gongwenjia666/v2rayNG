@@ -319,7 +319,8 @@ class MainActivity : BaseMainActivity() {
 
     @Composable
     override fun MainContent(viewModel: MainViewModel, onAction: (MainAction) -> Unit, onNavigate: (MainDestination) -> Unit) {
-        MainScreen(viewModel, onAction, onNavigate)
+        // TV 版界面：不依赖系统 UI_MODE 判断，遥控器方向键 + OK 键操作
+        GtvScreen(viewModel, onAction, onNavigate)
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {

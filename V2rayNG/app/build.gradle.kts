@@ -17,8 +17,8 @@ android {
         applicationId = "com.v2ray.tv"
         minSdk = 24
         targetSdk = 37
-        versionCode = 2026112701
-        versionName = "2026.11.27_1"
+        versionCode = 2026112702
+        versionName = "2026.11.27_2"
 
         val abiFilterList = (properties["ABI_FILTERS"] as? String)?.split(';')
         splits {
