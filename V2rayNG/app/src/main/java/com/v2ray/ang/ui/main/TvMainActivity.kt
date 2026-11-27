@@ -16,7 +16,7 @@ class TvMainActivity : BaseMainActivity() {
         val platform = LocalBringIntoViewSpec.current
         val scrollSpec = remember(platform) { PixelAlignedBringIntoViewSpec(platform) }
         CompositionLocalProvider(LocalBringIntoViewSpec provides scrollSpec) {
-            TvMainScreen(viewModel, onAction, onNavigate)
+            GtvScreen(viewModel, onAction, onNavigate)
         }
     }
 }
