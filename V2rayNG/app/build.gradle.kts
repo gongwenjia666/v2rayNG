@@ -14,11 +14,11 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.v2ray.ang"
+        applicationId = "com.v2ray.tv"
         minSdk = 24
         targetSdk = 37
         versionCode = 762
-        versionName = "2.4.2"
+        versionName = "2.4.2-tv"
 
         val abiFilterList = (properties["ABI_FILTERS"] as? String)?.split(';')
         splits {

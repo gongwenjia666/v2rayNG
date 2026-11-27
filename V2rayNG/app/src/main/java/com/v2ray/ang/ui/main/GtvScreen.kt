@@ -123,7 +123,7 @@ internal fun GtvScreen(
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             Text(
-                text = "v2rayNG",
+                text = "v2ray.tv",
                 fontSize = 30.sp,
                 fontWeight = FontWeight.ExtraBold,
                 color = MaterialTheme.colorScheme.onBackground
