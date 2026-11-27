@@ -17,8 +17,8 @@ android {
         applicationId = "com.v2ray.tv"
         minSdk = 24
         targetSdk = 37
-        versionCode = 762
-        versionName = "2.4.2-tv"
+        versionCode = 2026112701
+        versionName = "2026.11.27_1"
 
         val abiFilterList = (properties["ABI_FILTERS"] as? String)?.split(';')
         splits {
@@ -97,10 +97,7 @@ android {
                 .forEach { output ->
                     val abi = output.getFilter("ABI") ?: "universal"
                     output.outputFileName = "v2rayNG_${variant.versionName}-fdroid_${abi}.apk"
-                    if (versionCodes.containsKey(abi)) {
-                        output.versionCodeOverride =
-                            (100 * variant.versionCode + versionCodes[abi]!!).plus(5000000)
-                    } else {
+                    if (!versionCodes.containsKey(abi)) {
                         return@forEach
                     }
                 }
@@ -117,10 +114,7 @@ android {
                         "universal"
 
                     output.outputFileName = "v2rayNG_${variant.versionName}_${abi}.apk"
-                    if (versionCodes.containsKey(abi)) {
-                        output.versionCodeOverride =
-                            (1000000 * versionCodes[abi]!!).plus(variant.versionCode)
-                    } else {
+                    if (!versionCodes.containsKey(abi)) {
                         return@forEach
                     }
                 }
